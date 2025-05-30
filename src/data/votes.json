@@ -1,0 +1,43 @@
+
+[
+  {
+    "id": "vote-001",
+    "judgeId": "judge-001",
+    "participantId": "participant-001",
+    "categoryId": "category-001",
+    "eventId": "event-001",
+    "score": 85,
+    "comments": "Excellent technique and emotional expression",
+    "submittedAt": "2024-06-15T10:30:00Z"
+  },
+  {
+    "id": "vote-002",
+    "judgeId": "judge-001",
+    "participantId": "participant-003",
+    "categoryId": "category-001",
+    "eventId": "event-001",
+    "score": 92,
+    "comments": "Outstanding vocal performance and stage presence",
+    "submittedAt": "2024-06-15T11:15:00Z"
+  },
+  {
+    "id": "vote-003",
+    "judgeId": "judge-002",
+    "participantId": "participant-002",
+    "categoryId": "category-002",
+    "eventId": "event-001",
+    "score": 88,
+    "comments": "Bold use of color and innovative composition",
+    "submittedAt": "2024-06-15T14:20:00Z"
+  },
+  {
+    "id": "vote-004",
+    "judgeId": "judge-003",
+    "participantId": "participant-004",
+    "categoryId": "category-003",
+    "eventId": "event-001",
+    "score": 79,
+    "comments": "Strong narrative structure, engaging characters",
+    "submittedAt": "2024-06-15T16:45:00Z"
+  }
+]

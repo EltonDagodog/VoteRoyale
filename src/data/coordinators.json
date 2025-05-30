@@ -1,0 +1,19 @@
+
+[
+  {
+    "id": "coord-001",
+    "name": "Michael Davis",
+    "email": "michael.davis@voteroyale.com",
+    "password": "admin123",
+    "role": "coordinator",
+    "department": "Event Management"
+  },
+  {
+    "id": "coord-002",
+    "name": "Rebecca Wilson",
+    "email": "rebecca.wilson@voteroyale.com",
+    "password": "admin456",
+    "role": "coordinator",
+    "department": "Creative Arts"
+  }
+]

@@ -1,0 +1,24 @@
+
+[
+  {
+    "id": "event-001",
+    "title": "Annual Talent Showcase 2024",
+    "description": "A celebration of artistic talent featuring performances, visual arts, and creative expression.",
+    "date": "2024-06-15",
+    "status": "active",
+    "location": "Grand Theater",
+    "maxParticipants": 50,
+    "coordinatorId": "coord-001"
+  },
+  
+  {
+    "id": "event-003",
+    "title": "Fashion Week Runway",
+    "description": "Premier fashion event featuring designer collections and emerging fashion talent.",
+    "date": "2024-08-10",
+    "status": "draft",
+    "location": "Fashion Center",
+    "maxParticipants": 25,
+    "coordinatorId": "coord-002"
+  }
+]

@@ -1,0 +1,43 @@
+
+[
+  {
+    "id": "judge-001",
+    "name": "Dr. Sarah Chen",
+    "email": "sarah.chen@email.com",
+    "accessCode": "JUDGE2024A",
+    "eventId": "event-001",
+    "specialization": "Performance Arts"
+  },
+  {
+    "id": "judge-002",
+    "name": "Marcus Rodriguez",
+    "email": "marcus.r@email.com",
+    "accessCode": "JUDGE2024B",
+    "eventId": "event-001",
+    "specialization": "Visual Arts"
+  },
+  {
+    "id": "judge-003",
+    "name": "Emma Thompson",
+    "email": "emma.t@email.com",
+    "accessCode": "JUDGE2024C",
+    "eventId": "event-001",
+    "specialization": "Creative Writing"
+  },
+  {
+    "id": "judge-004",
+    "name": "Dr. James Park",
+    "email": "james.park@email.com",
+    "accessCode": "INNOV2024A",
+    "eventId": "event-002",
+    "specialization": "Technology"
+  },
+  {
+    "id": "judge-005",
+    "name": "Lisa Johnson",
+    "email": "lisa.j@email.com",
+    "accessCode": "INNOV2024B",
+    "eventId": "event-002",
+    "specialization": "Business Strategy"
+  }
+]

@@ -1,0 +1,87 @@
+
+[
+  {
+    "id": "category-001",
+    "name": "Evening Gown",
+    "eventId": "event-001",
+    "description": "Elegance and poise in formal evening wear",
+    "maxScore": 100,
+    "weight": 1.0,
+    "status": "open",
+    "criteria": [
+      { "id": 1, "name": "Beauty", "description": "Overall physical beauty and appeal", "percentage": 40 },
+      { "id": 2, "name": "Elegance", "description": "Grace and sophistication in presentation", "percentage": 35 },
+      { "id": 3, "name": "Stage Presence", "description": "Confidence and charisma on stage", "percentage": 25 }
+    ]
+  },
+  {
+    "id": "category-002",
+    "name": "Swimwear",
+    "eventId": "event-001",
+    "description": "Physical fitness and confidence showcase",
+    "maxScore": 100,
+    "weight": 1.0,
+    "status": "open",
+    "criteria": [
+      { "id": 1, "name": "Physical Fitness", "description": "Overall body conditioning and health", "percentage": 50 },
+      { "id": 2, "name": "Confidence", "description": "Self-assurance and poise", "percentage": 30 },
+      { "id": 3, "name": "Presentation", "description": "How well they carry themselves", "percentage": 20 }
+    ]
+  },
+  {
+    "id": "category-003",
+    "name": "Talent",
+    "eventId": "event-001",
+    "description": "Special skills and artistic abilities",
+    "maxScore": 100,
+    "weight": 1.0,
+    "status": "closed",
+    "criteria": [
+      { "id": 1, "name": "Skill Level", "description": "Technical proficiency in their talent", "percentage": 45 },
+      { "id": 2, "name": "Creativity", "description": "Originality and innovation", "percentage": 30 },
+      { "id": 3, "name": "Entertainment Value", "description": "Ability to engage and entertain audience", "percentage": 25 }
+    ]
+  },
+  {
+    "id": "category-004",
+    "name": "Interview",
+    "eventId": "event-002",
+    "description": "Intelligence, personality, and communication skills",
+    "maxScore": 100,
+    "weight": 1.5,
+    "status": "open",
+    "criteria": [
+      { "id": 1, "name": "Intelligence", "description": "Knowledge and critical thinking", "percentage": 35 },
+      { "id": 2, "name": "Communication", "description": "Clarity and articulation", "percentage": 40 },
+      { "id": 3, "name": "Personality", "description": "Charm and likability", "percentage": 25 }
+    ]
+  },
+  {
+    "id": "category-005",
+    "name": "Cultural Costume",
+    "eventId": "event-002",
+    "description": "Representation of cultural heritage and identity",
+    "maxScore": 100,
+    "weight": 1.2,
+    "status": "closed",
+    "criteria": [
+      { "id": 1, "name": "Authenticity", "description": "True representation of culture", "percentage": 40 },
+      { "id": 2, "name": "Craftsmanship", "description": "Quality and detail of costume", "percentage": 35 },
+      { "id": 3, "name": "Presentation", "description": "How well they showcase the costume", "percentage": 25 }
+    ]
+  },
+  {
+    "id": "category-006",
+    "name": "National Costume",
+    "eventId": "event-002",
+    "description": "Representing national pride and heritage",
+    "maxScore": 100,
+    "weight": 1.0,
+    "status": "open",
+    "criteria": [
+      { "id": 1, "name": "Cultural Significance", "description": "Meaningful representation of nation", "percentage": 30 },
+      { "id": 2, "name": "Design Quality", "description": "Artistic and construction quality", "percentage": 40 },
+      { "id": 3, "name": "Stage Impact", "description": "Visual impact and presentation", "percentage": 30 }
+    ]
+  }
+]
