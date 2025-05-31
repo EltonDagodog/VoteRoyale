@@ -17,12 +17,40 @@ const Register = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
 
-  // Use Vite's environment variable syntax
   const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000/api";
 
-  const handleRegister = async (e) => {
+  const validatePassword = (password: string) => {
+    const minLength = 8;
+    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+    const hasUpperCase = /[A-Z]/.test(password);
+    
+    if (password.length < minLength) {
+      return "Password must be at least 8 characters long.";
+    }
+    if (!hasSpecialChar) {
+      return "Password must contain at least one special character (e.g., !@#$%^&*).";
+    }
+    if (!hasUpperCase) {
+      return "Password must contain at least one uppercase letter.";
+    }
+    return null;
+  };
+
+  const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+
+    // Validate password requirements
+    const passwordError = validatePassword(password);
+    if (passwordError) {
+      toast({
+        title: "Invalid Password",
+        description: passwordError,
+        variant: "destructive",
+      });
+      setIsLoading(false);
+      return;
+    }
 
     // Check if passwords match
     if (password !== confirmPassword) {
@@ -51,7 +79,7 @@ const Register = () => {
 
       setIsLoading(false);
       navigate("/login");
-    } catch (error) {
+    } catch (error: any) {
       const errorMessage =
         error.response?.data?.email?.[0] || error.response?.data?.detail || "Registration failed. Please try again.";
       toast({
