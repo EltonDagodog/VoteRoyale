@@ -172,9 +172,9 @@ const Landing = () => {
               <p className="text-gray-400 leading-relaxed">
                 Our team is available to assist you with any inquiries or custom requirements. Let’s make your event a royal success!
               </p>
-              <Button size="lg" className="bg-yellow-600 hover:bg-yellow-700 text-black font-semibold px-8 py-4 border-2 border-yellow-600 shadow-md hover:shadow-lg transition-all duration-300">
+              {/* <Button size="lg" className="bg-yellow-600 hover:bg-yellow-700 text-black font-semibold px-8 py-4 border-2 border-yellow-600 shadow-md hover:shadow-lg transition-all duration-300">
                 Contact Us
-              </Button>
+              </Button> */}
             </div>
             <div className="bg-yellow-50 p-8 rounded-lg shadow-lg border-2 border-yellow-200 text-gray-900">
               <h4 className="text-xl font-semibold mb-4">Office Hours</h4>
