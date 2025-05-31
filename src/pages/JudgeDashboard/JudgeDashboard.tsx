@@ -16,7 +16,6 @@ const JudgeDashboard = () => {
   const API_URL = import.meta.env.VITE_API_URL || "http://192.168.6.195:8000/api";
   const token = localStorage.getItem("accessToken");
 
-
   useEffect(() => {
     const fetchDashboardData = async () => {
       const user = localStorage.getItem("judge");
@@ -32,11 +31,10 @@ const JudgeDashboard = () => {
       }
 
       try {
-        
         const response = await axios.get(
-          `${API_URL}/events/judges/dashboard/`, // Corrected endpoint
+          `${API_URL}/events/judges/dashboard/`,
           {
-            headers: { Authorization: `Bearer ${token}` }, // Proper header configuration
+            headers: { Authorization: `Bearer ${token}` },
           }
         );
         setJudgeData(response.data);
@@ -55,18 +53,16 @@ const JudgeDashboard = () => {
     fetchDashboardData();
   }, [navigate, toast]);
 
- const handleLogout = () => {
-    // Prompt user for confirmation
+  const handleLogout = () => {
     const confirmLogout = window.confirm("Are you sure you want to log out?");
     if (confirmLogout) {
-      // Proceed with logout
       localStorage.clear();
       toast({
         title: "Logged Out",
         description: "You have been successfully logged out.",
       });
       navigate("/");
-    } // If "No" or cancel, do nothing
+    }
   };
 
   const getVoteStatus = (participantId: string, categoryId: string) => {
@@ -81,6 +77,12 @@ const JudgeDashboard = () => {
   const getTotalPossibleVotes = () => {
     if (!judgeData) return 0;
     return (judgeData.participants?.length || 0) * (judgeData.categories?.length || 0);
+  };
+
+  const getVotingProgressPercentage = () => {
+    const totalPossible = getTotalPossibleVotes();
+    const totalSubmitted = getTotalVotesSubmitted();
+    return totalPossible > 0 ? Math.round((totalSubmitted / totalPossible) * 100) : 0;
   };
 
   if (isLoading) {
@@ -109,7 +111,7 @@ const JudgeDashboard = () => {
                 <p className="text-sm text-gray-300">Welcome,</p>
                 <p className="font-semibold">{judgeData.judge.name}</p>
               </div>
-              <Button 
+              <Button
                 onClick={handleLogout}
                 variant="outline"
                 size="sm"
@@ -206,16 +208,14 @@ const JudgeDashboard = () => {
                   <div className="text-gray-600">Total Required</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">
-                    {Math.round((getTotalVotesSubmitted() / getTotalPossibleVotes()) * 100)}%
-                  </div>
+                  <div className="text-3xl font-bold text-green-600">{getVotingProgressPercentage()}%</div>
                   <div className="text-gray-600">Complete</div>
                 </div>
               </div>
               <div className="mt-4 bg-gray-200 rounded-full h-3">
-                <div 
+                <div
                   className="bg-yellow-600 h-3 rounded-full transition-all duration-300"
-                  style={{ width: `${(getTotalVotesSubmitted() / getTotalPossibleVotes()) * 100}%` }}
+                  style={{ width: `${getVotingProgressPercentage()}%` }}
                 ></div>
               </div>
             </CardContent>
@@ -243,9 +243,9 @@ const JudgeDashboard = () => {
                         <span className="text-black">{category.name}</span>
                         <div className="flex items-center space-x-2">
                           <span className="text-gray-600">{category.criteria.length} criteria</span>
-                          <Button 
-                            size="sm" 
-                            className={category.status === "open" ? "bg-yellow-600 hover:bg-yellow-700 text-black" : "bg-gray-300 text-gray-700 cursor-not-allowed"} 
+                          <Button
+                            size="sm"
+                            className={category.status === "open" ? "bg-yellow-600 hover:bg-yellow-700 text-black" : "bg-gray-300 text-gray-700 cursor-not-allowed"}
                             disabled={category.status !== "open"}
                             onClick={() => navigate(`/judge-dashboard/awards/${category.id}`)}
                           >
@@ -278,9 +278,9 @@ const JudgeDashboard = () => {
                         <span className="text-black">{category.name}</span>
                         <div className="flex items-center space-x-2">
                           <span className="text-gray-600">{category.criteria.length} criteria</span>
-                          <Button 
-                            size="sm" 
-                            className={category.status === "open" ? "bg-yellow-600 hover:bg-yellow-700 text-black" : "bg-gray-300 text-gray-700 cursor-not-allowed"} 
+                          <Button
+                            size="sm"
+                            className={category.status === "open" ? "bg-yellow-600 hover:bg-yellow-700 text-black" : "bg-gray-300 text-gray-700 cursor-not-allowed"}
                             disabled={category.status !== "open"}
                             onClick={() => navigate(`/judge-dashboard/awards/${category.id}`)}
                           >
@@ -298,7 +298,7 @@ const JudgeDashboard = () => {
         {/* Call to Action */}
         <div className="mt-8 text-center">
           <Link to="/judge-dashboard/awards">
-            <Button 
+            <Button
               className="bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-3 px-8 text-lg rounded-full transition-all duration-300 transform hover:scale-105 hover:text-black shadow-md hover:shadow-lg"
             >
               Ready to Judge?
