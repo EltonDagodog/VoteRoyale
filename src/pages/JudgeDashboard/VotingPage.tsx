@@ -395,7 +395,7 @@ const VotingPage = () => {
                         <img
                           src={participant.image || "https://via.placeholder.com/48"}
                           alt={participant.name}
-                          className="w-12 h-12 rounded-full border-2 border-yellow-500"
+                          className="w-40 h-40 object-cover rounded-xl border-2 border-yellow-500"
                         />
                         <div>
                           <h4 className="text-black font-semibold">
@@ -447,7 +447,7 @@ const VotingPage = () => {
                         <img
                           src={participant.image || "https://via.placeholder.com/48"}
                           alt={participant.name}
-                          className="w-12 h-12 rounded-full border-2 border-yellow-500"
+                          className="w-40 h-40 object-cover rounded-xl border-2 border-yellow-500"
                         />
                         <div>
                           <h4 className="text-black font-semibold">
