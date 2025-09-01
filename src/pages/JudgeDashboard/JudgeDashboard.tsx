@@ -246,8 +246,8 @@ const JudgeDashboard = () => {
                           <Button
                             size="sm"
                             className={category.status === "open" ? "bg-yellow-600 hover:bg-yellow-700 text-black" : "bg-gray-300 text-gray-700 cursor-not-allowed"}
-                            disabled={category.status !== "open"}
-                            onClick={() => navigate(`/judge-dashboard/awards/${category.id}`)}
+                            disabled
+                        
                           >
                             {category.status}
                           </Button>
@@ -282,7 +282,7 @@ const JudgeDashboard = () => {
                             size="sm"
                             className={category.status === "open" ? "bg-yellow-600 hover:bg-yellow-700 text-black" : "bg-gray-300 text-gray-700 cursor-not-allowed"}
                             disabled
-                            onClick={() => navigate(`/judge-dashboard/awards/${category.id}`)}
+                        
                           >
                             {category.status}
                           </Button>
