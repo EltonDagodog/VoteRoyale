@@ -245,8 +245,8 @@ const JudgeDashboard = () => {
                           <span className="text-gray-600">{category.criteria.length} criteria</span>
                           <Button
                             size="sm"
-                            className={category.status === "open" ? "bg-yellow-600 hover:bg-yellow-700 text-black" : "bg-gray-300 text-gray-700 cursor-not-allowed"}
-                            disabled
+                            className={category.status === "open" ? "bg-green-600 hover:bg-yellow-700 text-black" : "bg-gray-300 text-gray-700 cursor-not-allowed"}
+                          
                         
                           >
                             {category.status}
@@ -280,8 +280,8 @@ const JudgeDashboard = () => {
                           <span className="text-gray-600">{category.criteria.length} criteria</span>
                           <Button
                             size="sm"
-                            className={category.status === "open" ? "bg-yellow-600 hover:bg-yellow-700 text-black" : "bg-gray-300 text-gray-700 cursor-not-allowed"}
-                            disabled
+                            className={category.status === "open" ? "bg-green-600 hover:bg-yellow-700 text-black" : "bg-gray-300 text-gray-700 cursor-not-allowed"}
+                           
                         
                           >
                             {category.status}
